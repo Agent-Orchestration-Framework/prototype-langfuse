@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "langchain": "^0.3.24",
+    "langfuse-langchain": "^3.37.2",
+    "openai": "^4.98.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21"
+  }
+}
