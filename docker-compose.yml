@@ -155,6 +155,22 @@ services:
     volumes:
       - langfuse_postgres_data:/var/lib/postgresql/data
 
+# uncomment for otelCollector or collector
+#  otel-collector:
+#    image: otel/opentelemetry-collector:latest
+#    container_name: otel-collector
+#    depends_on:
+#      - langfuse-web
+#    ports:
+#      - "4318:4318"     # OTLP HTTP receiver port
+#    environment:
+#      - LANGFUSE_AUTH_HEADER=${LANGFUSE_AUTH_HEADER}
+#      - LANGFUSE_OTLP_ENDPOINT=${LANGFUSE_OTLP_ENDPOINT}
+#    volumes:
+#      - ./otel-config.yaml:/otel-config.yaml:ro
+#    command: [ "--config", "/otel-config.yaml" ]
+#    restart: unless-stopped
+
 volumes:
   langfuse_postgres_data:
     driver: local
