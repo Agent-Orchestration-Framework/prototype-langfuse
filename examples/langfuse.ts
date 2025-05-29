@@ -1,4 +1,7 @@
-import { Langfuse } from 'langfuse';
+import { Langfuse } from 'langfuse-langchain';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: './.env.local' });
 
 // Prefer using environment variables for secrets
 const publicKey = process.env.LANGFUSE_PUBLIC_KEY;
