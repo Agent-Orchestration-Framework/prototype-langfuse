@@ -8,7 +8,7 @@ const model = new ChatOpenAI({
 });
 
 const layoutMoleculesPrompt = PromptTemplate.fromTemplate(
-  `Create a list of molcule components needed to generate the requested layout
+  `Create a list of molecule components needed to generate the requested layout
   
   Layout request:
   {input}`
